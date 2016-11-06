@@ -1,15 +1,14 @@
 {
-  "name": "node-android",
-  "version": "1.0.0",
-  "description": "A MEAN app that allows users to manage contact lists",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.13.3",
-    "express": "^4.13.3",
-    "mongodb": "^2.1.6"
+    "name": "node-android",
+    "version": "0.0.1",
+    "main": "server.js",
+    "dependencies": {
+        "express" : "~4.0.0",
+        "mongoose" : "~3.8.8",
+        "csprng" : "~0.1.1",
+        "connect": "~2.14.4",
+        "nodemailer":"~0.6.3",
+        "crypto":"~0.0.3",
+        "gravatar":"~1.0.6"
   }
 }
