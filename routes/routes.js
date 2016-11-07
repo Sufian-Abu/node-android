@@ -34,6 +34,21 @@ module.exports = function(app) {
             res.json(found);
     });
     });
+
+  app.get('/register', function(req, res) {
+ 
+        var response ={};
+        register.find({},function(err,data){
+
+            if(err) {
+                response = {"error" : true,"message" : "Error fetching data"};
+            } else {
+                response = {"error" : false,"message" : data};
+            }
+            res.json(response);
+        });
+    });
+
  
  
     app.post('/api/chgpass', function(req, res) {
