@@ -27,7 +27,6 @@ module.exports = function(app) {
     app.post('/register',function(req,res){
         var email = req.body.email;
         var password = req.body.password;
-        email.created_at = new Date();
  
         register.register(email,password,function (found) {
             console.log(found);
@@ -35,19 +34,19 @@ module.exports = function(app) {
     });
     });
 
-  app.get('/register', function(req, res) {
+  // app.get('/register', function(req, res) {
  
-        var response ={};
-        register.find({},function(err,data){
+  //       var response ={};
+  //       register.find({},function(err,data){
 
-            if(err) {
-                response = {"error" : true,"message" : "Error fetching data"};
-            } else {
-                response = {"error" : false,"message" : data};
-            }
-            res.json(response);
-        });
-    });
+  //           if(err) {
+  //               response = {"error" : true,"message" : "Error fetching data"};
+  //           } else {
+  //               response = {"error" : false,"message" : data};
+  //           }
+  //           res.json(response);
+  //       });
+  //   });
 
  
  
