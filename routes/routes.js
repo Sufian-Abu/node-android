@@ -28,7 +28,8 @@ module.exports = function(app) {
         var email = req.body.email;
         var password = req.body.password;
         var public_key=req.body.public_key;
-        register.register(email,password,public_key,function (found) {
+        var created_at=Date.now();
+        register.register(email,password,public_key,created_at,function (found) {
             console.log(found);
             res.json(found);
     });
