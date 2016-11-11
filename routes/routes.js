@@ -42,8 +42,9 @@ module.exports = function(app) {
         var public_key=req.body.public_key;
         var lat=req.body.lat;
         var lon=req.body.lon;
+        var category=req.body.category;
         var created_at= new Date();
-        community.community(displayname,report,public_key,created_at,lat,lon,function (found) {
+        community.community(displayname,report,public_key,created_at,lat,lon,category,function (found) {
             console.log(found);
             res.json(found);
     });
