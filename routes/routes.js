@@ -2,7 +2,6 @@ var chgpass = require('config/chgpass');
 var register = require('config/register');
 var login = require('config/login');
 var community = require('config/community');
-var user = require('config/models');
  
 module.exports = function(app) {
  
@@ -51,19 +50,19 @@ module.exports = function(app) {
     });
     });
 
-  app.get('/community', function(req, res) {
+  // app.get('/community', function(req, res) {
  
-        var response ={};
-        user.find({},function(err,data){
+  //       var response ={};
+  //       community.find({},function(err,data){
 
-            if(err) {
-                response = {"error" : true,"message" : "Error fetching data"};
-            } else {
-                response = {"error" : false,"message" : data};
-            }
-            res.json(response);
-        });
-    });
+  //           if(err) {
+  //               response = {"error" : true,"message" : "Error fetching data"};
+  //           } else {
+  //               response = {"error" : false,"message" : data};
+  //           }
+  //           res.json(response);
+  //       });
+  //   });
 
  
  
