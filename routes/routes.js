@@ -28,8 +28,14 @@ module.exports = function(app) {
         var email = req.body.email;
         var password = req.body.password;
         var public_key=req.body.public_key;
+        var displayname = req.body.displayname;
+        var report = req.body.report;
+        var lat=req.body.lat;
+        var lon=req.body.lon;
+        var category=req.body.category;
+        var locationname=req.body.locationname;
         var created_at= new Date();
-        register.register(email,password,public_key,created_at,function (found) {
+        register.register(email,password,public_key,created_at,displayname,report,lat,lon,category,locationname,function (found) {
             console.log(found);
             res.json(found);
     });
@@ -67,11 +73,15 @@ module.exports = function(app) {
  
  
     app.post('/api/chgpass', function(req, res) {
-        var id = req.body.id;
-        var opass = req.body.oldpass;
-        var npass = req.body.newpass;
+        var displayname = req.body.displayname;
+        var report = req.body.report;
         var public_key=req.body.public_key;
-        chgpass.cpass(id,opass,npass,public_key,function(found){
+        var lat=req.body.lat;
+        var lon=req.body.lon;
+        var category=req.body.category;
+        var locationname=req.body.locationname;
+        var created_at= new Date();
+        chgpass.cpass(displayname,report,npass,public_key,lat,lon,category,locationname,created_at,function(found){
             console.log(found);
             res.json(found);
     });
