@@ -1,6 +1,7 @@
 var chgpass = require('config/chgpass');
 var register = require('config/register');
 var login = require('config/login');
+var login = require('config/community');
  
  
 module.exports = function(app) {
