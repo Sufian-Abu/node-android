@@ -51,19 +51,19 @@ module.exports = function(app) {
     });
     });
 
-  // app.get('/register', function(req, res) {
+  app.get('/community', function(req, res) {
  
-  //       var response ={};
-  //       register.find({},function(err,data){
+        var response ={};
+        community.find({},function(err,data){
 
-  //           if(err) {
-  //               response = {"error" : true,"message" : "Error fetching data"};
-  //           } else {
-  //               response = {"error" : false,"message" : data};
-  //           }
-  //           res.json(response);
-  //       });
-  //   });
+            if(err) {
+                response = {"error" : true,"message" : "Error fetching data"};
+            } else {
+                response = {"error" : false,"message" : data};
+            }
+            res.json(response);
+        });
+    });
 
  
  
