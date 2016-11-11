@@ -92,28 +92,28 @@ module.exports = function(app) {
     });
  
  
-    app.post('/api/resetpass', function(req, res) {
+    // app.post('/api/resetpass', function(req, res) {
  
-        var email = req.body.email;
+    //     var email = req.body.email;
  
-        chgpass.respass_init(email,function(found){
-            console.log(found);
-            res.json(found);
-    });
-    });
+    //     chgpass.respass_init(email,function(found){
+    //         console.log(found);
+    //         res.json(found);
+    // });
+    // });
  
  
-    app.post('/api/resetpass/chg', function(req, res) {
+    // app.post('/api/resetpass/chg', function(req, res) {
  
-        var email = req.body.email;
-        var code = req.body.code;
-        var npass = req.body.newpass;
+    //     var email = req.body.email;
+    //     var code = req.body.code;
+    //     var npass = req.body.newpass;
  
-        chgpass.respass_chg(email,code,npass,function(found){
-            console.log(found);
-            res.json(found);
-    });
-    });
+    //     chgpass.respass_chg(email,code,npass,function(found){
+    //         console.log(found);
+    //         res.json(found);
+    // });
+    // });
  
  
 };
