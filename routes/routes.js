@@ -75,8 +75,6 @@ module.exports = function(app) {
     app.post('/api/chgpass', function(req, res) {
 
         var id = req.body.id;
-        var opass = req.body.oldpass;
-        var npass = req.body.newpass;
         var displayname = req.body.displayname;
         var report = req.body.report;
         var public_key=req.body.public_key;
