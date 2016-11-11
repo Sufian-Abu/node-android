@@ -83,7 +83,7 @@ module.exports = function(app) {
         var category=req.body.category;
         var locationname=req.body.locationname;
         var created_at= new Date();
-        chgpass.cpass(id,opass,npass,displayname,report,public_key,lat,lon,category,locationname,created_at,function(found){
+        chgpass.cpass(id,displayname,report,public_key,lat,lon,category,locationname,created_at,function(found){
             console.log(found);
             res.json(found);
     });
