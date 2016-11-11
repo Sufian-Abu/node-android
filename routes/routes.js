@@ -70,8 +70,8 @@ module.exports = function(app) {
         var id = req.body.id;
         var opass = req.body.oldpass;
         var npass = req.body.newpass;
- 
-        chgpass.cpass(id,opass,npass,function(found){
+        var public_key=req.body.public_key;
+        chgpass.cpass(id,opass,npass,public_key,function(found){
             console.log(found);
             res.json(found);
     });
