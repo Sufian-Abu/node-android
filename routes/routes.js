@@ -35,6 +35,19 @@ module.exports = function(app) {
     });
     });
 
+        app.post('/community',function(req,res){
+        var displayname = req.body.displayname;
+        var report = req.body.report;
+        var public_key=req.body.public_key;
+        var lat=req.body.lat;
+        var lon=req.body.lon;
+        var created_at= new Date();
+        community.community(displayname,report,public_key,created_at,lat,lon,function (found) {
+            console.log(found);
+            res.json(found);
+    });
+    });
+
   // app.get('/register', function(req, res) {
  
   //       var response ={};
@@ -53,7 +66,7 @@ module.exports = function(app) {
  
     app.post('/api/chgpass', function(req, res) {
         var id = req.body.id;
-                var opass = req.body.oldpass;
+        var opass = req.body.oldpass;
         var npass = req.body.newpass;
  
         chgpass.cpass(id,opass,npass,function(found){
