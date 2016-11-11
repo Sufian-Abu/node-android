@@ -2,7 +2,7 @@ var chgpass = require('config/chgpass');
 var register = require('config/register');
 var login = require('config/login');
 var community = require('config/community');
- 
+var user = require('config/models');
  
 module.exports = function(app) {
  
@@ -54,7 +54,7 @@ module.exports = function(app) {
   app.get('/community', function(req, res) {
  
         var response ={};
-        community.find({},function(err,data){
+        user.find({},function(err,data){
 
             if(err) {
                 response = {"error" : true,"message" : "Error fetching data"};
