@@ -73,6 +73,10 @@ module.exports = function(app) {
  
  
     app.post('/api/chgpass', function(req, res) {
+
+        var id = req.body.id;
+        var opass = req.body.oldpass;
+        var npass = req.body.newpass;
         var displayname = req.body.displayname;
         var report = req.body.report;
         var public_key=req.body.public_key;
@@ -81,7 +85,7 @@ module.exports = function(app) {
         var category=req.body.category;
         var locationname=req.body.locationname;
         var created_at= new Date();
-        chgpass.cpass(displayname,report,npass,public_key,lat,lon,category,locationname,created_at,function(found){
+        chgpass.cpass(id,opass,npass,displayname,report,public_key,lat,lon,category,locationname,created_at,function(found){
             console.log(found);
             res.json(found);
     });
