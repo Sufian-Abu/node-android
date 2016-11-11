@@ -28,12 +28,12 @@ module.exports = function(app) {
         var email = req.body.email;
         var password = req.body.password;
         var public_key=req.body.public_key;
-        var displayname = req.body.displayname;
-        var report = req.body.report;
-        var lat=req.body.lat;
-        var lon=req.body.lon;
-        var category=req.body.category;
-        var locationname=req.body.locationname;
+        var displayname = "";
+        var report = "";
+        var lat="";
+        var lon="";
+        var category="";
+        var locationname="";
         var created_at= new Date();
         register.register(email,password,public_key,created_at,displayname,report,lat,lon,category,locationname,function (found) {
             console.log(found);
