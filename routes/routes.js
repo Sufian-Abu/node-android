@@ -9,55 +9,56 @@ module.exports = function(app) {
  
     app.get('/peerinfo', function(req, res) {
  
-        res.send([
-  
-  {
-     
-     "name": "navila",
-     "text": "Left 7:00 PM"
+        res.send({
+  "data": {
+    
+    "success" : {
+      
+      "array" : [
+        
+       {
+    "name": "navila",
+    "text": "Left 7:00 PM"
   },
   {
-    
-     "name": "Ontora",
-     "text": "Left 6:30 PM"
-   },
-   {
-      "name": "Prova",
-     "text": "Left 7:00 PM"
-   },
-   
-   {
-    
-     "name": "Razia",
-     "text": "Left 7:40 PM"
-   },
-   
-   {
-    
+    "name": "Ontora",
+    "text": "Left 6:30 PM"
+  },
+  {
+    "name": "Prova",
+    "text": "Left 7:00 PM"
+  },
+  {
+    "name": "Razia",
+    "text": "Left 7:40 PM"
+  },
+  {
     "name": "Nishi",
-     "text": "Left 8:40 PM"
-   },
-   {
+    "text": "Left 8:40 PM"
+  },
+  {
     "name": "Syeda",
-     "text": "Left 7:40 PM"
-   },
-   {
-    
-     "name": "NoorJaha",
-     "text": "Left 8:40 PM"
-   },
-   
-     {
+    "text": "Left 7:40 PM"
+  },
+  {
+    "name": "NoorJaha",
+    "text": "Left 8:40 PM"
+  },
+  {
     "name": "Azim",
-     "text": "Left 6:40 PM"
-   },
-   {
+    "text": "Left 6:40 PM"
+  },
+  {
+    "name": "Noora",
+    "text": "Left 10:40 PM"
+  }
+        ]
+    },
     
-     "name": "Noora",
-     "text": "Left 10:40 PM"
-   }
-  
- ]);
+    "status" : 2000
+  }
+}
+
     });
 
 
