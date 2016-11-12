@@ -49,7 +49,7 @@ module.exports = function(app) {
         var username=req.body.username;
         var locationname=req.body.locationname;
         var created_at= new Date();
-        community.community(report,report,lat,lon,category,username,locationname,created_at,function (found) {
+        report.report(report,report,lat,lon,category,username,locationname,created_at,function (found) {
             console.log(found);
             res.json(found);
     });
