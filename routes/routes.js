@@ -64,55 +64,63 @@ module.exports = function(app) {
 
     app.get('/office', function(req, res) {
  
-        res.send([
-  
-  {
-     
-     "name": "navila",
-     "text": "Left 7:00 PM"
+        res.send({
+  "data": {
+    
+    "success" : {
+      
+      "array" : [
+        
+       {
+    "officename": "ABC",
+    "Review": "3.70",
+    "Description": " Not good enough"
   },
   {
+    "officename": "FFF",
+    "Review": "3.60",
+    "Description": "Bad management"
+  },
+  {
+    "officename": "GGG",
+    "Review": "3.50",
+    "Description": " Bad working place"
+  },
+  {
+    "officename": "DDD",
+    "Review": "4.50",
+    "Description": "Very good HR department"
+  },
+  {
+    "officename": "DDF",
+    "Review": "4.00",
+    "Description": " Good Environment"
+  },
+  {"officename": "HHH",
+    "Review": "3.50",
+    "Description": " Not good enough"
+  },
+  {"officename": "KJJ",
+    "Review": "2.00",
+    "Description": "Bad management"
+  },
+  {
+   "officename": "IUYY",
+    "Review": "5.00",
+    "Description": " Very good "
+  },
+  {
+    "officename": "NBV",
+    "Review": "4.00",
+    "Description": " Friendly Working"
+  }
+        ]
+    },
     
-     "name": "Ontora",
-     "text": "Left 6:30 PM"
-   },
-   {
-      "name": "Prova",
-     "text": "Left 7:00 PM"
-   },
-   
-   {
-    
-     "name": "Razia",
-     "text": "Left 7:40 PM"
-   },
-   
-   {
-    
-    "name": "Nishi",
-     "text": "Left 8:40 PM"
-   },
-   {
-    "name": "Syeda",
-     "text": "Left 7:40 PM"
-   },
-   {
-    
-     "name": "NoorJaha",
-     "text": "Left 8:40 PM"
-   },
-   
-     {
-    "name": "Azim",
-     "text": "Left 6:40 PM"
-   },
-   {
-    
-     "name": "Noora",
-     "text": "Left 10:40 PM"
-   }
-  
- ]);
+    "status" : 2000
+  }
+}
+);
     });
  
  
