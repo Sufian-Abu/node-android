@@ -1,7 +1,7 @@
 var chgpass = require('config/chgpass');
 var register = require('config/register');
 var login = require('config/login');
-var community = require('config/community');
+var report = require('config/report');
 var user = require('config/models'); 
 module.exports = function(app) {
  
@@ -41,16 +41,15 @@ module.exports = function(app) {
     });
     });
 
-        app.post('/community',function(req,res){
-        var displayname = req.body.displayname;
+        app.post('/report',function(req,res){
         var report = req.body.report;
-        var public_key=req.body.public_key;
-        var lat=req.body.lat;
+        var lat = req.body.lat;
         var lon=req.body.lon;
         var category=req.body.category;
+        var username=req.body.username;
         var locationname=req.body.locationname;
         var created_at= new Date();
-        community.community(displayname,report,public_key,created_at,lat,lon,category,locationname,function (found) {
+        community.community(report,report,lat,lon,category,username,locationname,created_at,function (found) {
             console.log(found);
             res.json(found);
     });
