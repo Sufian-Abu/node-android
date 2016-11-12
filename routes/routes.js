@@ -7,9 +7,57 @@ module.exports = function(app) {
  
  
  
-    app.get('/', function(req, res) {
+    app.get('/peerinfo', function(req, res) {
  
-        res.end("Node-Android-Project");
+        res.send([
+  
+  {
+     
+     "name": "navila",
+     "text": "Left 7:00 PM"
+  },
+  {
+    
+     "name": "Ontora",
+     "text": "Left 6:30 PM"
+   },
+   {
+      "name": "Prova",
+     "text": "Left 7:00 PM"
+   },
+   
+   {
+    
+     "name": "Razia",
+     "text": "Left 7:40 PM"
+   },
+   
+   {
+    
+    "name": "Nishi",
+     "text": "Left 8:40 PM"
+   },
+   {
+    "name": "Syeda",
+     "text": "Left 7:40 PM"
+   },
+   {
+    
+     "name": "NoorJaha",
+     "text": "Left 8:40 PM"
+   },
+   
+     {
+    "name": "Azim",
+     "text": "Left 6:40 PM"
+   },
+   {
+    
+     "name": "Noora",
+     "text": "Left 10:40 PM"
+   }
+  
+ ]);
     });
  
  
