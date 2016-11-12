@@ -59,6 +59,71 @@ module.exports = function(app) {
   
  ]);
     });
+
+
+    app.get('/office', function(req, res) {
+ 
+        res.send([
+  
+  {
+     
+     "offciename": "ABC",
+     "review": "3.5",
+     "Discussion": "Moderate, Not good Enough"
+     
+  },
+  {
+    
+     "offciename": "DFF",
+     "review": "2.5",
+     "Discussion": "Very rude management with women"
+   },
+   {
+       "offciename": "XYZ",
+     "review": "4.5",
+     "Discussion": "Open Access for everyone"
+   },
+   
+   {
+    
+     "offciename": "DXY",
+     "review": "5.00",
+     "Discussion": "Awesome,all are treated same here"
+   },
+   
+   {
+    
+    "offciename": "IHY",
+     "review": "3.0",
+     "Discussion": "Very bad in behavior"
+   },
+   {
+     "offciename": "JHJH",
+     "review": "4.5",
+     "Discussion": "Moderate, Not good Enough"
+   },
+   {
+    
+      "offciename": "OIO",
+     "review": "4.5",
+     "Discussion": "Good working place but CEO is not good enough"
+   },
+   
+     {
+     "offciename": "LII",
+     "review": "1.0",
+     "Discussion": "Very poor working environemnt for women"
+   },
+   {
+    
+     "offciename": "OTR",
+     "review": "2.5",
+     "Discussion": "Management don't know how to treat with a women"
+   }
+  
+ ]);
+    });
+ 
  
  
     app.post('/login',function(req,res){
