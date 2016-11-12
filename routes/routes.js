@@ -41,19 +41,19 @@ module.exports = function(app) {
     });
     });
 
-        app.post('/report',function(req,res){
-        var report = req.body.report;
-        var lat = req.body.lat;
-        var lon=req.body.lon;
-        var category=req.body.category;
-        var username=req.body.username;
-        var locationname=req.body.locationname;
-        var created_at= new Date();
-        report.report(report,report,lat,lon,category,username,locationname,created_at,function (found) {
-            console.log(found);
-            res.json(found);
-    });
-    });
+    //     app.post('/report',function(req,res){
+    //     var report = req.body.report;
+    //     var lat = req.body.lat;
+    //     var lon=req.body.lon;
+    //     var category=req.body.category;
+    //     var username=req.body.username;
+    //     var locationname=req.body.locationname;
+    //     var created_at= new Date();
+    //     report.report(report,report,lat,lon,category,username,locationname,created_at,function (found) {
+    //         console.log(found);
+    //         res.json(found);
+    // });
+    // });
 
   app.get('/api/chgpass', function(req, res) {
  
