@@ -58,7 +58,7 @@ module.exports = function(app) {
     "status" : 2000
   }
 }
-
+);
     });
 
 
@@ -68,58 +68,48 @@ module.exports = function(app) {
   
   {
      
-     "offciename": "ABC",
-     "review": "3.5",
-     "Discussion": "Moderate, Not good Enough"
-     
+     "name": "navila",
+     "text": "Left 7:00 PM"
   },
   {
     
-     "offciename": "DFF",
-     "review": "2.5",
-     "Discussion": "Very rude management with women"
+     "name": "Ontora",
+     "text": "Left 6:30 PM"
    },
    {
-       "offciename": "XYZ",
-     "review": "4.5",
-     "Discussion": "Open Access for everyone"
+      "name": "Prova",
+     "text": "Left 7:00 PM"
    },
    
    {
     
-     "offciename": "DXY",
-     "review": "5.00",
-     "Discussion": "Awesome,all are treated same here"
+     "name": "Razia",
+     "text": "Left 7:40 PM"
    },
    
    {
     
-    "offciename": "IHY",
-     "review": "3.0",
-     "Discussion": "Very bad in behavior"
+    "name": "Nishi",
+     "text": "Left 8:40 PM"
    },
    {
-     "offciename": "JHJH",
-     "review": "4.5",
-     "Discussion": "Moderate, Not good Enough"
+    "name": "Syeda",
+     "text": "Left 7:40 PM"
    },
    {
     
-      "offciename": "OIO",
-     "review": "4.5",
-     "Discussion": "Good working place but CEO is not good enough"
+     "name": "NoorJaha",
+     "text": "Left 8:40 PM"
    },
    
      {
-     "offciename": "LII",
-     "review": "1.0",
-     "Discussion": "Very poor working environemnt for women"
+    "name": "Azim",
+     "text": "Left 6:40 PM"
    },
    {
     
-     "offciename": "OTR",
-     "review": "2.5",
-     "Discussion": "Management don't know how to treat with a women"
+     "name": "Noora",
+     "text": "Left 10:40 PM"
    }
   
  ]);
